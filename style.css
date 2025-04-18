@@ -1,140 +1,111 @@
-body {
-    font-family: 'Segoe Script', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #dcdcdc; /* Soft white for text */
-    background: linear-gradient(135deg, #000428, #004e92); /* Deep night sky gradient */
-    background-attachment: fixed;
-    transition: background 0.5s ease-in-out;
-}
-
-.container {
-   max-width: 900px;
-   margin: 40px auto;
-   padding: 30px;
-   background: rgba(0, 0, 0, 0.7); /* Darkened container for depth */
-   border-radius: 12px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-   animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1,
-h2 {
-    color: #f5f5f5; /* Soft white for headings */
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.header {
+    background-color: #f4f7fa;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .header {
     text-align: center;
-}
-
-.header h1 {
-    margin: 10px 0;
-    font-size: 28px;
-    letter-spacing: 1px;
-}
-
-.contact {
-    margin: 10px 0;
-    font-size: 15px;
-}
-
-.contact a {
-    color: #f5f5f5; /* Soft white for links */
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .contact {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .contact a {
+    color: #3498db;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact a:hover {
-    color: #ffd700; /* Soft gold glow on hover */
+  }
+  
+  .contact a:hover {
     text-decoration: underline;
-}
-
-.section {
-    margin: 30px 0;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1); /* Slight glow effect */
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.section:hover {
-    transform: scale(1.02);
-}
-
-.section h2 {
-    margin-bottom: 15px;
-    border-bottom: 3px solid #ffd700; /* Glowing gold underline */
-    padding-bottom: 5px;
-}
-
-.item {
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.item:hover {
-    background: rgba(255, 255, 255, 0.1); /* Subtle shimmer on hover */
-    border-radius: 6px;
-    padding: 10px;
-}
-
-.item h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #f5f5f5; /* Soft white for item titles */
-    font-weight: bold;
-}
-
-.item p {
-    margin: 8px 0;
-    font-size: 15px;
-    color: #b0c4de; /* Soft light blue for content text */
-}
-
-.skills ul {
+  }
+  
+  /* Sections */
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Items (Experience, Education) */
+  .item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .item h3 {
+    font-size: 1.1rem;
+    color: #34495e;
+  }
+  
+  .item p {
+    margin: 0.3rem 0;
+    color: #555;
+  }
+  
+  /* Skills */
+  .skills ul {
     list-style: none;
-    padding: 0;
-}
-
-.skills ul li {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+    padding-left: 0;
+  }
+  
+  .skills li {
+    background-color: #e3ecf3;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  /* Projects Link */
+  .section a {
     display: inline-block;
-    background: #8a2be2; /* Deep violet (a starry feel) */
-    color: #ffffff;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-.skills ul li:hover {
-   position: relative;
-   animation: starburst 0.5s ease-out;
-}
-@keyframes starburst{
-    0%{
-        transform: scale(1);
-        box-shadow: 0 0 5px 0 rgba (255, 215, 0, 0.8);
-
-    }
-    100% {
-        transform: scale(1.1);
-        box-shadow: 0 0 15px 10px rgba(255, 215, 0, 0.8);
-    }
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .section a:hover {
+    background-color: #217dbb;
+  }
 }
